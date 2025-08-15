@@ -1,3 +1,6 @@
+Paused — will revisit after some days. Current version has known errors.
+
+
 # Notify Rohan 📱
 
 A professional, cross-platform notification management application built with KivyMD. Create, manage, and organize your notifications with a beautiful Material Design interface.
