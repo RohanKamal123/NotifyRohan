@@ -1,0 +1,41 @@
+# Core KivyMD and Kivy dependencies
+kivy>=2.2.0,<2.4.0
+kivymd>=1.1.1,<1.3.0
+
+# Date and time handling
+python-dateutil>=2.8.2
+
+# Image processing for assets
+pillow>=9.0.0,<11.0.0
+
+# Type hints support
+typing-extensions>=4.0.0
+
+# For cross-platform notifications (optional)
+plyer>=2.0.0
+
+# Enhanced JSON operations (optional)
+jsonschema>=4.0.0
+
+# Development and testing dependencies (optional)
+# Uncomment these for development
+# pytest>=7.0.0
+# pytest-cov>=4.0.0
+# black>=22.0.0
+# flake8>=5.0.0
+
+# Platform-specific dependencies (automatically handled by buildozer)
+# For Android
+# pyjnius>=1.4.0
+
+# For iOS  
+# pyobjus>=1.2.0
+
+# For Windows notifications
+# win10toast>=0.9.0
+
+# For macOS notifications
+# pync>=2.0.0
+
+# For Linux notifications
+# notify2>=0.3.0

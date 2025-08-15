@@ -1,0 +1,265 @@
+#:kivy 2.0
+
+<NotifyRohanApp>:
+    theme_cls.primary_palette: "Blue"
+    theme_cls.primary_hue: "600"
+    theme_cls.accent_palette: "Amber"
+    theme_cls.theme_style: "Light"
+
+# Enhanced Material Design Components
+
+<CustomMDCard@MDCard>:
+    elevation: 3
+    radius: [12, 12, 12, 12]
+    md_bg_color: app.theme_cls.surfaceColor
+    ripple_behavior: True
+    
+<CustomMDButton@MDRaisedButton>:
+    elevation: 2
+    radius: [8, 8, 8, 8]
+    
+<CustomMDTextField@MDTextField>:
+    mode: "outlined"
+    radius: [8, 8, 8, 8]
+    
+# Animation definitions for screen transitions
+<MDScreenManager>:
+    transition: 
+        SlideTransition(direction='left', duration=0.3)
+
+# Custom List Item for notifications
+<NotificationListItem@MDListItem>:
+    theme_text_color: "Primary"
+    radius: 8
+    height: dp(80)
+    
+    IconLeftWidget:
+        icon: "bell-outline"
+        theme_icon_color: "Primary"
+    
+    IconRightWidget:
+        icon: "chevron-right"
+        theme_icon_color: "Secondary"
+
+# Floating Action Button with enhanced styling
+<CustomFAB@MDFloatingActionButton>:
+    md_bg_color: app.theme_cls.primary_color
+    elevation: 8
+    
+# Enhanced Toolbar
+<CustomToolbar@MDTopAppBar>:
+    elevation: 4
+    left_action_items: []
+    right_action_items: []
+    md_bg_color: app.theme_cls.primary_color
+
+# Dialog styling
+<CustomDialog@MDDialog>:
+    radius: [16, 16, 16, 16]
+    elevation: 8
+
+# Snackbar styling  
+<CustomSnackbar@MDSnackbar>:
+    radius: [8, 8, 8, 8]
+    elevation: 6
+    
+# Search field styling
+<SearchField@MDTextField>:
+    mode: "outlined"
+    hint_text: "Search notifications..."
+    icon_left: "magnify"
+    radius: [12, 12, 12, 12]
+    size_hint_y: None
+    height: dp(48)
+
+# Settings card styling
+<SettingsCard@MDCard>:
+    elevation: 2
+    radius: [12, 12, 12, 12]
+    md_bg_color: app.theme_cls.surfaceColor
+    padding: dp(16)
+    size_hint_y: None
+    
+# Date/Time picker button styling
+<DateTimeButton@MDRaisedButton>:
+    radius: [8, 8, 8, 8]
+    elevation: 2
+    md_bg_color: app.theme_cls.surfaceColor
+    theme_text_color: "Primary"
+
+# Enhanced switch styling
+<CustomSwitch@MDSwitch>:
+    width: dp(48)
+    active_color: app.theme_cls.primary_color
+    
+# Icon button with enhanced ripple
+<CustomIconButton@MDIconButton>:
+    theme_icon_color: "Primary"
+    ripple_scale: 2.0
+
+# Progress indicator
+<CustomProgressBar@MDProgressBar>:
+    color: app.theme_cls.primary_color
+    
+# Divider styling
+<CustomDivider@MDDivider>:
+    color: app.theme_cls.dividerColor
+    height: dp(1)
+
+# Enhanced card for empty states
+<EmptyStateCard@MDCard>:
+    elevation: 1
+    radius: [16, 16, 16, 16]
+    md_bg_color: app.theme_cls.surfaceColor
+    padding: dp(24)
+    size_hint_y: None
+    height: dp(120)
+    
+# Loading spinner
+<LoadingSpinner@MDSpinner>:
+    size_hint: None, None
+    size: dp(32), dp(32)
+    color: app.theme_cls.primary_color
+    
+# Enhanced menu styling
+<CustomMenu@MDDropdownMenu>:
+    radius: [8, 8, 8, 8]
+    elevation: 8
+    
+# Form section styling
+<FormSection@MDBoxLayout>:
+    orientation: "vertical"
+    spacing: dp(12)
+    padding: [0, dp(8)]
+    
+# Action button row
+<ActionButtonRow@MDBoxLayout>:
+    orientation: "horizontal" 
+    spacing: dp(12)
+    size_hint_y: None
+    height: dp(48)
+    padding: [dp(16), 0]
+    
+# Stats card styling
+<StatsCard@MDCard>:
+    elevation: 3
+    radius: [12, 12, 12, 12]
+    md_bg_color: app.theme_cls.surfaceColor
+    padding: dp(16)
+    size_hint_y: None
+    height: dp(100)
+    
+# Error text styling
+<ErrorText@MDLabel>:
+    theme_text_color: "Error"
+    font_style: "Caption"
+    
+# Success text styling  
+<SuccessText@MDLabel>:
+    theme_text_color: "Primary"
+    font_style: "Caption"
+    
+# Section header styling
+<SectionHeader@MDLabel>:
+    font_style: "H6"
+    theme_text_color: "Primary"
+    size_hint_y: None
+    height: dp(32)
+    
+# Subtitle text styling
+<SubtitleText@MDLabel>:
+    font_style: "Subtitle1"
+    theme_text_color: "Secondary"
+    
+# Body text styling
+<BodyText@MDLabel>:
+    font_style: "Body1"
+    theme_text_color: "Primary"
+    text_size: self.width, None
+    
+# Caption text styling
+<CaptionText@MDLabel>:
+    font_style: "Caption"
+    theme_text_color: "Hint"
+    
+# Notification status indicators
+<OverdueIndicator@MDIcon>:
+    icon: "clock-alert"
+    theme_icon_color: "Error"
+    
+<UpcomingIndicator@MDIcon>:
+    icon: "clock-outline"  
+    theme_icon_color: "Primary"
+    
+<CompletedIndicator@MDIcon>:
+    icon: "check-circle"
+    theme_icon_color: "Custom"
+    theme_icon_color_custom: "#4CAF50"
+
+# Spacing helpers
+<SmallSpacer@Widget>:
+    size_hint_y: None
+    height: dp(8)
+    
+<MediumSpacer@Widget>:
+    size_hint_y: None
+    height: dp(16)
+    
+<LargeSpacer@Widget>:
+    size_hint_y: None
+    height: dp(24)
+
+# Container layouts
+<ScrollContainer@MDScrollView>:
+    do_scroll_x: False
+    do_scroll_y: True
+    scroll_type: ['bars']
+    bar_width: dp(4)
+    bar_color: app.theme_cls.primary_color
+    
+<ContentContainer@MDBoxLayout>:
+    orientation: "vertical"
+    spacing: dp(16)
+    padding: dp(16)
+    size_hint_y: None
+    adaptive_height: True
+    
+# Enhanced ripple effects
+<RippleCard@MDCard>:
+    ripple_behavior: True
+    ripple_color: app.theme_cls.primary_color
+    ripple_alpha: 0.2
+    
+# Animated elements
+<AnimatedButton@MDRaisedButton>:
+    elevation: 2
+    on_press: 
+        Animation(elevation=6, duration=0.1).start(self)
+    on_release:
+        Animation(elevation=2, duration=0.1).start(self)
+        
+<AnimatedFAB@MDFloatingActionButton>:
+    elevation: 8
+    on_press:
+        Animation(elevation=12, duration=0.1).start(self)
+    on_release:
+        Animation(elevation=8, duration=0.1).start(self)
+
+# Theme-aware colors
+<ThemeCard@MDCard>:
+    md_bg_color: app.theme_cls.surfaceColor if app.theme_cls.theme_style == "Light" else app.theme_cls.bg_dark
+    
+<ThemeLabel@MDLabel>:
+    theme_text_color: "Primary" if app.theme_cls.theme_style == "Light" else "Primary"
+    
+# Responsive sizing
+<ResponsiveCard@MDCard>:
+    size_hint_x: 1 if root.width < dp(600) else 0.8
+    pos_hint: {"center_x": 0.5} if root.width >= dp(600) else {}
+    
+# Custom transitions
+<FadeTransition@FadeTransition>:
+    duration: 0.3
+    
+<SlideTransition@SlideTransition>:
+    duration: 0.3
